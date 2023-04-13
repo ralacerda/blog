@@ -208,7 +208,7 @@ function getLargestNumber(numbersArray) {
 }
 ```
 
-### Utilizando Math.max()
+### Utilizando `Math.max()`
 
 Na minha opinião, a forma mais fácil e rápida de resolver o problema.
 O objeto global `Math` possui o método `max()` que retorna o maior valor entre os argumentos passados.
