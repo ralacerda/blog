@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem 3rem;
+}
+
+:where(nav, footer) ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+h1 {
+  font-size: var(--step-3);
+}
