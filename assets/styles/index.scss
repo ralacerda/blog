@@ -6,9 +6,6 @@
 @import "elements/footer";
 
 body {
-  min-height: 100vh;
-  min-height: 100dvh;
-
   line-height: 1.6;
   font-size: var(--step-1);
   color: var(--fg);
@@ -24,16 +21,6 @@ ol {
   list-style-position: inside;
 }
 
-footer ul {
-  flex-wrap: wrap;
-}
-
-hr {
-  border: none;
-  height: 1px;
-  background-color: var(--blue);
-}
-
 :any-link {
   color: var(--fg);
   text-decoration: none;
@@ -46,5 +33,13 @@ hr {
 #__nuxt {
   width: clamp(16rem, 90vw, 80ch);
   margin-inline: auto;
-  margin-block: 1rem;
+
+  & > div {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding-block: 1rem;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
 }
