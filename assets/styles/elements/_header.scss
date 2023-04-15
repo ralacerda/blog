@@ -4,6 +4,7 @@ header {
   align-items: baseline;
   flex-wrap: wrap;
   gap: 0.5rem 3rem;
+  font-family: Lato;
 }
 
 :where(nav, footer) ul {
@@ -12,7 +13,6 @@ header {
   list-style: none;
 }
 
-h1 {
-  font-size: var(--step-3);
-  font-family: "Crimson Text";
+.site-name {
+  font-size: var(--step-2);
 }

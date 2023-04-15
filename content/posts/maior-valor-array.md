@@ -12,7 +12,7 @@ Como exemplo, vamos utilizar o array abaixo. O objetivo é que a função retorn
 const numbers = [4, 5, 4, 9, 13, 41, 43, 57, 30];
 ```
 
-### Utilizando `sort()`
+## Utilizando `sort()`
 
 Você pode pensar em solucionar o problema da seguinte forma:
 
@@ -95,7 +95,7 @@ function getLargestNumber(numbersArray) {
 }
 ```
 
-### Iterando o array
+## Iterando o array
 
 Outra possível solução do problema seguiria os seguintes passos:
 
@@ -207,7 +207,7 @@ function getLargestNumber(numbersArray) {
 }
 ```
 
-### Utilizando `Math.max()`
+## Utilizando `Math.max()`
 
 Na minha opinião, a forma mais fácil e rápida de resolver o problema.
 O objeto global `Math` possui o método `max()` que retorna o maior valor entre os argumentos passados.
@@ -234,7 +234,7 @@ function getLargestNumber(numbersArray) {
 getLargestNumber(numbers); // 57
 ```
 
-### Conclusão
+## Conclusão
 
 Chegamos em quatros formas diferentes de escrever a função:
 

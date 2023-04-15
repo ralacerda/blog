@@ -35,11 +35,17 @@ time {
   margin-top: 0.2em;
 }
 
-h2 {
-  font-size: var(--step-4);
+:where(h1, h2) {
+  line-height: 1.1;
+  max-width: 20ch;
+  font-family: Lato;
 }
 
-h3 {
+h1 {
+  font-size: var(--step-3);
+}
+
+h2 {
   font-size: var(--step-2);
 }
 
@@ -68,4 +74,9 @@ pre {
 
 sup a {
   margin-inline: 0.1em;
+}
+
+.footnotes ol {
+  margin-top: 1.4em;
+  @include flow(0.4em);
 }

@@ -19,9 +19,9 @@ const formattedDate = useDateFormat(
 <template>
   <template v-if="data">
     <div class="article-info">
-      <h2>
+      <h1>
         {{ data.title }}
-      </h2>
+      </h1>
       <div>
         <time :datetime="data.publishDate">{{ formattedDate }}</time>
         <ul class="article-tags">
