@@ -2,11 +2,36 @@ main {
   margin-block: 4rem 2rem;
 }
 
-article > div > * + * {
-  margin-top: 1.4em;
+.article-info {
+  @include flow(1.2em);
+  font-size: var(--step-1);
+  & > div {
+    @include flow(0.2em);
+  }
 }
 
-article :where(li + li) {
+time {
+  display: block;
+}
+
+.article-tags {
+  display: flex;
+  list-style: none;
+  font-style: italic;
+  gap: 0.4rem;
+
+  & a:before {
+    content: "#";
+    color: inherit;
+  }
+}
+
+.article-content {
+  margin-top: 2rem;
+  @include flow(1.4em);
+}
+
+.article-content :where(li + li) {
   margin-top: 0.2em;
 }
 
@@ -33,7 +58,7 @@ pre {
   font-size: inherit;
 }
 
-article :any-link {
+.article-content :any-link {
   color: var(--blue);
 
   &:hover {

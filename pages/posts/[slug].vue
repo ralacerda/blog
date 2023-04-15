@@ -22,7 +22,14 @@ const formattedDate = useDateFormat(
       <h2>
         {{ data.title }}
       </h2>
-      <div>{{ formattedDate }}</div>
+      <div>
+        <time :datetime="data.publishDate">{{ formattedDate }}</time>
+        <ul class="article-tags">
+          <li v-for="tag in data.tags">
+            <NuxtLink :href="'/tags/' + tag">{{ tag }}</NuxtLink>
+          </li>
+        </ul>
+      </div>
     </div>
     <ContentRenderer :value="data" class="article-content" />
   </template>
