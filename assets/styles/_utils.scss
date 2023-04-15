@@ -1,0 +1,5 @@
+@mixin flow($amount) {
+  & > * + * {
+    margin-top: $amount;
+  }
+}
