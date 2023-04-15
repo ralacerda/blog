@@ -234,7 +234,7 @@ function getLargestNumber(numbersArray) {
 getLargestNumber(numbers); // 57
 ```
 
-## Conclusão
+### Conclusão
 
 Chegamos em quatros formas diferentes de escrever a função:
 
