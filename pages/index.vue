@@ -10,10 +10,8 @@ function toggleTheme() {
 </script>
 
 <template>
-  <NuxtLayout>
-    <h1>Hello</h1>
-    <ul>
-      <button @click="toggleTheme()">change</button>
-    </ul>
-  </NuxtLayout>
+  <h1>Hello</h1>
+  <ul>
+    <button @click="toggleTheme()">change</button>
+  </ul>
 </template>

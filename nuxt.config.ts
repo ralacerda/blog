@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   css: ["@/assets/styles/index.scss"],
   modules: ["@nuxt/content", "@nuxtjs/color-mode", "@nuxtjs/google-fonts"],
   content: {
-    documentDriven: true,
     highlight: {
       theme: {
         default: "github-dark",
