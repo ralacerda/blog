@@ -1,13 +1,9 @@
-<script setup lang="ts"></script>
-
 <template>
   <div>
     <header>
-      <h1>
-        <NuxtLink to="/"
-          ><span class="gray-text">Frontend</span> Walrus</NuxtLink
-        >
-      </h1>
+      <NuxtLink to="/" class="site-name"
+        ><span class="gray-text">Frontend</span> Walrus</NuxtLink
+      >
       <nav>
         <ul>
           <li>
@@ -24,7 +20,7 @@
     </header>
     <main>
       <article>
-        <slot />
+        <NuxtPage />
       </article>
     </main>
     <footer>
