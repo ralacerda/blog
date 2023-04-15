@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="content">
+  <div>
     <header>
       <h1>
         <NuxtLink to="/"

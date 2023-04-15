@@ -1,8 +1,9 @@
-@import "variables";
-@import "utils";
-@import "reset";
-@import "header";
-@import "main";
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/reset";
+@import "elements/header";
+@import "elements/main";
+@import "elements/footer";
 
 body {
   min-height: 100vh;
@@ -33,10 +34,6 @@ footer ul {
   font-family: Lato;
 }
 
-h1 {
-  font-family: "Crimson Text";
-}
-
 hr {
   border: none;
   height: 1px;
@@ -52,12 +49,8 @@ hr {
   }
 }
 
-.content {
+#__nuxt {
   width: clamp(16rem, 90vw, 80ch);
   margin-inline: auto;
   margin-block: 1rem;
-}
-
-footer {
-  font-size: var(--step-0);
 }
