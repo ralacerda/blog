@@ -19,9 +19,7 @@
       </nav>
     </header>
     <main>
-      <article>
-        <NuxtPage />
-      </article>
+      <NuxtPage />
     </main>
     <footer>
       <hr />

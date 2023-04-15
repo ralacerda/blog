@@ -17,7 +17,7 @@ const formattedDate = useDateFormat(
 </script>
 
 <template>
-  <template v-if="data">
+  <article v-if="data">
     <div class="article-info">
       <h1>
         {{ data.title }}
@@ -32,6 +32,6 @@ const formattedDate = useDateFormat(
       </div>
     </div>
     <ContentRenderer :value="data" class="article-content" />
-  </template>
+  </article>
   <p v-else>Não conseguimos achar</p>
 </template>

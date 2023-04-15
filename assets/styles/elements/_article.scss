@@ -1,0 +1,64 @@
+.article-info {
+  @include flow(1.2em);
+  font-size: var(--step-1);
+  & > div {
+    @include flow(0.2em);
+  }
+}
+
+time {
+  display: block;
+}
+
+.article-tags {
+  display: flex;
+  list-style: none;
+  font-style: italic;
+  gap: 0.4rem;
+
+  & a:before {
+    content: "#";
+    color: inherit;
+  }
+}
+
+.article-content {
+  margin-top: 2rem;
+  @include flow(1.4em);
+}
+
+.article-content :where(li + li) {
+  margin-top: 0.2em;
+}
+
+pre {
+  background-color: var(--bg-secondary);
+  overflow: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  font-size: var(--step-1);
+}
+
+:not(pre) code {
+  display: inline-block;
+  padding-inline: 0.2rem;
+  background-color: var(--bg-secondary);
+  font-size: inherit;
+}
+
+.article-content :any-link {
+  color: var(--blue);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+sup a {
+  margin-inline: 0.1em;
+}
+
+.footnotes ol {
+  margin-top: 1.4em;
+  @include flow(0.4em);
+}
