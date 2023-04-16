@@ -15,9 +15,23 @@ const tagSet = Array.from(getAllTags());
 </script>
 
 <template>
-  <ul>
+  <h1>Tags</h1>
+  <ul class="tag-list">
     <li v-for="tag in tagSet">
       <NuxtLink :to="'tags/' + tag" class="tag">{{ tag }}</NuxtLink>
     </li>
   </ul>
 </template>
+
+<style scoped lang="scss">
+.tag-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5em;
+}
+
+.tag-list .tag {
+  font-size: var(--step-2);
+}
+</style>
