@@ -1,8 +1,14 @@
 .article-info {
-  @include flow(1.2em);
   font-size: var(--step-1);
   & > div {
-    @include flow(0.2em);
+    display: flex;
+    margin-top: 0.4rem;
+
+    & time::after {
+      content: "–";
+      display: inline-block;
+      padding-inline: 0.3rem;
+    }
   }
 }
 
@@ -13,7 +19,7 @@
 }
 
 .article-content {
-  margin-top: 2rem;
+  margin-top: 1rem;
   @include flow(1.4em);
 }
 
