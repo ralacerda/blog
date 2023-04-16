@@ -1,17 +1,17 @@
 <script setup lang="ts">
-const contentQuery = await queryContent("posts").find();
-// console.log(contentQuery);
-
-const colorMode = useColorMode();
-
-function toggleTheme() {
-  colorMode.preference = colorMode.preference == "dark" ? "light" : "dark";
-}
+const { data: posts } = await useAsyncData(() =>
+  queryContent(`/posts/`)
+    .only(["title", "tags", "publishDate", "shortDescription", "_path"])
+    .limit(5)
+    .find()
+);
 </script>
 
 <template>
-  <h1>Hello</h1>
-  <ul>
-    <button @click="toggleTheme()">change</button>
-  </ul>
+  <h1>Frontend Walrus</h1>
+  <article v-if="posts">
+    <PostList :postList="posts" />
+  </article>
+  <p v-else>Não conseguimos achar</p>
+  <NuxtLink to="/posts">Todos os posts</NuxtLink>
 </template>
