@@ -21,10 +21,6 @@ const formattedDate = useDateFormat(
         ><h2>{{ post.title }}</h2>
       </NuxtLink>
       <time :datetime="post.publishDate">{{ formattedDate }}</time>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        consectetur praesentium eos, tempore sequi doloribus.
-      </p>
       <ul class="tag-list">
         <li v-for="tag in post.tags">
           <NuxtLink class="tag" :to="'tags/' + tag">{{ tag }}</NuxtLink>
