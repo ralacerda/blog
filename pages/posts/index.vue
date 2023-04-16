@@ -2,7 +2,9 @@
 import { ParsedContent } from "@nuxt/content/dist/runtime/types";
 
 const { data: postList } = await useAsyncData("posts", () =>
-  queryContent("/posts").only(["title", "_path", "tags"]).find()
+  queryContent("/posts")
+    .only(["title", "tags", "publishDate", "shortDescription", "_path"])
+    .find()
 );
 </script>
 
