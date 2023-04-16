@@ -13,13 +13,7 @@ time {
 .article-tags {
   display: flex;
   list-style: none;
-  font-style: italic;
   gap: 0.4rem;
-
-  & a:before {
-    content: "#";
-    color: inherit;
-  }
 }
 
 .article-content {

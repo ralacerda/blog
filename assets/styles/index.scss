@@ -44,3 +44,12 @@ ol {
     grid-template-rows: auto 1fr auto;
   }
 }
+
+.tag {
+  &:before {
+    // font-style: italic;
+    font-size: 0.8em;
+    content: "#";
+    color: inherit;
+  }
+}
