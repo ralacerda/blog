@@ -7,10 +7,10 @@
       <nav>
         <ul>
           <li>
-            <NuxtLink to="#">Posts</NuxtLink>
+            <NuxtLink to="/posts">Posts</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="#">Tags</NuxtLink>
+            <NuxtLink to="/tags">Tags</NuxtLink>
           </li>
           <li>
             <NuxtLink to="#">Sobre</NuxtLink>
