@@ -1,7 +1,12 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   css: ["@/assets/styles/index.scss"],
-  modules: ["@nuxt/content", "@nuxtjs/color-mode", "@nuxtjs/google-fonts"],
+  modules: [
+    "@nuxt/content",
+    "@nuxtjs/color-mode",
+    "@nuxtjs/google-fonts",
+    "@vueuse/nuxt",
+  ],
   content: {
     highlight: {
       theme: {
