@@ -53,3 +53,8 @@ ol {
     color: inherit;
   }
 }
+
+time {
+  display: block;
+  color: var(--fg-secondary);
+}
