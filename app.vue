@@ -13,7 +13,7 @@
             <NuxtLink to="/tags">Tags</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="#">Sobre</NuxtLink>
+            <NuxtLink to="/sobre">Sobre</NuxtLink>
           </li>
         </ul>
       </nav>
