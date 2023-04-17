@@ -3,7 +3,7 @@ import { useDateFormat } from "@vueuse/core";
 
 const route = await useRoute();
 
-const { data } = await useAsyncData(() =>
+const { data: post } = await useAsyncData(() =>
   queryContent(`/posts/${route.params.slug}`).findOne()
 );
 
@@ -20,27 +20,27 @@ defineOgImageStatic({
 });
 
 useSeoMeta({
-  title: () => data.value?.title,
-  description: () => data.value?.description,
+  title: () => post.value?.title,
+  description: () => post.value?.description,
 });
 </script>
 
 <template>
-  <article v-if="data">
+  <article v-if="post">
     <div class="article-info">
       <h1>
-        {{ data.title }}
+        {{ post.title }}
       </h1>
       <div>
-        <time :datetime="data.publishDate">{{ formattedDate }}</time>
+        <time :datetime="post.publishDate">{{ formattedDate }}</time>
         <ul class="article-tags">
-          <li v-for="tag in data.tags">
+          <li v-for="tag in post.tags">
             <NuxtLink :href="'/tags/' + tag" class="tag">{{ tag }}</NuxtLink>
           </li>
         </ul>
       </div>
     </div>
-    <ContentRenderer :value="data" class="article-content" />
+    <PostContent :value="post" />
     <NuxtLink to="/posts" class="link-backward">Ver outras posts</NuxtLink>
   </article>
   <p v-else>Não conseguimos achar</p>
