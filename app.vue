@@ -25,11 +25,13 @@
       <hr />
       <p>Renato Lacerda · 2023</p>
       <ul>
-        <li><a href="#">Linkedin</a></li>
-        <li><a href="#">GitHub</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Mastodon</a></li>
-        <li><a href="#">CodePen</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/renato-ac-lacerda">Linkedin</a>
+        </li>
+        <li><a href="https://github.com/ralacerda">GitHub</a></li>
+        <li><a href="https://twitter.com/renatoaclacerda">Twitter</a></li>
+        <li><a href="https://hachyderm.io/@renato">Mastodon</a></li>
+        <li><a href="https://codepen.io/ralacerda">CodePen</a></li>
       </ul>
     </footer>
   </div>
