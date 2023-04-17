@@ -1,3 +1,9 @@
+<script setup lang="ts">
+defineOgImageStatic({
+  component: "DefaultImage",
+});
+</script>
+
 <template>
   <div>
     <header>
@@ -19,6 +25,7 @@
       </nav>
     </header>
     <main>
+      <SeoKit />
       <NuxtPage />
     </main>
     <footer>

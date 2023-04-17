@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@vueuse/nuxt",
   ],
+  extends: ["nuxt-seo-kit"],
   content: {
     highlight: {
       theme: {
@@ -32,7 +33,15 @@ export default defineNuxtConfig({
     families: {
       "Noto+Sans": true,
       Lato: true,
-      "Crimson+Text": true,
+    },
+  },
+  runtimeConfig: {
+    public: {
+      siteUrl: "https://frontend-walrus.netlify.app/",
+      siteName: "Frontend Walrus",
+      siteDescription:
+        "O Frontend Walrus é um site onde eu compartilho meus estudos e recursos de desenvolvimento FrontEnd. O objetivo é compartilhar o que eu tenho aprendido com o objetivo de ajudar outros desenvolvedores.",
+      language: "pt-BR",
     },
   },
   app: {
@@ -58,5 +67,8 @@ export default defineNuxtConfig({
         { rel: "manifest", href: "/site.webmanifest" },
       ],
     },
+  },
+  experimental: {
+    componentIslands: true,
   },
 });

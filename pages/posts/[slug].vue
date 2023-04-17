@@ -14,6 +14,15 @@ const formattedDate = useDateFormat(
     locales: "pt-BR",
   }
 );
+
+defineOgImageStatic({
+  component: "PostImage",
+});
+
+useSeoMeta({
+  title: () => data.value?.title,
+  description: () => data.value?.description,
+});
 </script>
 
 <template>
