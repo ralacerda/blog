@@ -1,9 +1,32 @@
 <script setup lang="ts">
-import { ParsedContent } from "@nuxt/content/dist/runtime/types";
-
-defineProps<{
-  postList: Pick<ParsedContent, string> | null;
+const props = defineProps<{
+  tag?: string | string[];
+  limit?: number;
 }>();
+
+const { data: postList } = await useAsyncData(() => {
+  const query = queryContent(`/posts/`).only([
+    "title",
+    "tags",
+    "publishDate",
+    "shortDescription",
+    "_path",
+  ]);
+
+  if (process.env.NODE_ENV !== "development") {
+    query.where({ draft: false });
+  }
+
+  if (props.tag) {
+    query.where({ tags: { $contains: props.tag } });
+  }
+
+  if (props.limit) {
+    query.limit(5);
+  }
+
+  return query.find();
+});
 
 const formattedDate = useDateFormat(
   new Date(Date.now()),
