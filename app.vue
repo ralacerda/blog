@@ -7,9 +7,9 @@ defineOgImageStatic({
 <template>
   <div>
     <header>
-      <div class="site-name">
-        <span class="gray-text">Frontend</span> Walrus
-      </div>
+      <NuxtLink to="/" class="site-name"
+        ><span class="gray-text">Frontend</span> Walrus</NuxtLink
+      >
       <nav>
         <ul>
           <li>
