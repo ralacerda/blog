@@ -21,7 +21,7 @@
 .article-content {
   margin-top: 1rem;
   @include flow(1.4em);
-  width: clamp(16rem, 90vw, 80ch);
+  @include max-content();
 }
 
 .article-content :where(li + li) {
