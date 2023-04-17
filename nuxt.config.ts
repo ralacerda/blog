@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "@vueuse/nuxt",
+    "unplugin-icons/nuxt",
   ],
   extends: ["nuxt-seo-kit"],
   content: {
