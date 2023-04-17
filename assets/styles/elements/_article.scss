@@ -32,7 +32,7 @@ pre {
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
   font-size: var(--step-1);
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 :not(pre) > code {
