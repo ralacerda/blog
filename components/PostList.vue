@@ -23,7 +23,7 @@ const formattedDate = useDateFormat(
       <time :datetime="post.publishDate">{{ formattedDate }}</time>
       <ul class="tag-list">
         <li v-for="tag in post.tags">
-          <NuxtLink class="tag" :to="'tags/' + tag">{{ tag }}</NuxtLink>
+          <NuxtLink class="tag" :to="'/tags/' + tag">{{ tag }}</NuxtLink>
         </li>
       </ul>
     </li>
