@@ -35,10 +35,8 @@ const formattedDate = useDateFormat(
 
 .post-list {
   list-style: none;
-  & > li {
-    margin-top: 1.5em;
-    @include flow(0.4em);
-  }
+  margin-top: 1.5em;
+  @include flow(0.4em);
 }
 
 .tag-list {
