@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: tagList } = await useAsyncData("tags", () =>
-  queryContent("/").only("tags").find()
+  queryContent("/").where({ draft: false }).only("tags").find()
 );
 
 function getAllTags() {

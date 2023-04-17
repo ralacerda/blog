@@ -4,6 +4,7 @@ const tag = route.params.tag;
 
 const { data: postList } = await useAsyncData(() =>
   queryContent(`/posts/`)
+    .where({ draft: false })
     .where({ tags: { $contains: tag } })
     .only(["title", "tags", "publishDate", "shortDescription", "_path"])
     .find()
