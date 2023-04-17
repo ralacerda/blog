@@ -32,7 +32,7 @@ ol {
 }
 
 #__nuxt {
-  width: clamp(16rem, 90vw, 80ch);
+  @include max-content();
   margin-inline: auto;
 
   & > div {

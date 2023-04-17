@@ -21,6 +21,7 @@
 .article-content {
   margin-top: 1rem;
   @include flow(1.4em);
+  width: clamp(16rem, 90vw, 80ch);
 }
 
 .article-content :where(li + li) {
@@ -29,13 +30,13 @@
 
 pre {
   background-color: var(--bg-secondary);
-  overflow: auto;
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
   font-size: var(--step-1);
+  overflow-x: scroll;
 }
 
-:not(pre) code {
+:not(pre) > code {
   display: inline-block;
   padding-inline: 0.2rem;
   background-color: var(--bg-secondary);

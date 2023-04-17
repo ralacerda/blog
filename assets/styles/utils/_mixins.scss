@@ -3,3 +3,7 @@
     margin-top: $amount;
   }
 }
+
+@mixin max-content() {
+  width: clamp(16rem, 90vw, 80ch);
+}
