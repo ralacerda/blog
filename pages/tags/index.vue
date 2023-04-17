@@ -28,7 +28,6 @@ const tagSet = Array.from(getAllTags());
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin-top: 1.5em;
 }
 
 .tag-list .tag {

@@ -35,7 +35,6 @@ const formattedDate = useDateFormat(
 
 .post-list {
   list-style: none;
-  margin-top: 1.5em;
   @include flow(0.4em);
 }
 
