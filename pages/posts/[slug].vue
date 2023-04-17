@@ -32,6 +32,7 @@ const formattedDate = useDateFormat(
       </div>
     </div>
     <ContentRenderer :value="data" class="article-content" />
+    <NuxtLink to="/posts" class="link-backward">Ver outras posts</NuxtLink>
   </article>
   <p v-else>Não conseguimos achar</p>
 </template>

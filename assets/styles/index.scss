@@ -58,3 +58,22 @@ time {
   display: block;
   color: var(--fg-secondary);
 }
+
+.link-forward,
+.link-backward {
+  display: block;
+  color: var(--blue);
+  margin-top: 2rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link-forward::after {
+  content: " →";
+}
+
+.link-backward::before {
+  content: "← ";
+}
