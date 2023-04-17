@@ -52,18 +52,3 @@ const formattedDate = useDateFormat(
     </li>
   </ul>
 </template>
-
-<style lang="scss" scoped>
-@import "assets/styles/utils/mixins";
-
-.post-list {
-  list-style: none;
-  @include flow(0.4em);
-}
-
-.tag-list {
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-</style>

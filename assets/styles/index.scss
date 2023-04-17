@@ -77,3 +77,14 @@ time {
 .link-backward::before {
   content: "← ";
 }
+
+.post-list {
+  list-style: none;
+  @include flow(0.4em);
+}
+
+.tag-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
