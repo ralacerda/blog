@@ -27,17 +27,6 @@ const { data: postList } = await useAsyncData(() => {
 
   return query.find();
 });
-
-dayjs.extend(utc);
-
-function formatDate(date: Date) {
-  const formattedDate = dayjs(date)
-    .locale("pt-BR")
-    .utc()
-    .format("DD [de] MMMM [de] YYYY");
-  return formattedDate;
-}
-);
 </script>
 
 <template>
@@ -46,7 +35,9 @@ function formatDate(date: Date) {
       <NuxtLink :to="post._path"
         ><h2>{{ post.title }}</h2>
       </NuxtLink>
-      <time :datetime="post.publishDate">{{ formattedDate }}</time>
+      <time :datetime="post.publishDate">{{
+        getFormattedDate(post.publishDate)
+      }}</time>
       <ul class="tag-list">
         <li v-for="tag in post.tags">
           <NuxtLink class="tag" :to="'/tags/' + tag">{{ tag }}</NuxtLink>

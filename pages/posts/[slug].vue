@@ -1,18 +1,8 @@
 <script setup lang="ts">
-import { useDateFormat } from "@vueuse/core";
-
 const route = await useRoute();
 
 const { data: post } = await useAsyncData(() =>
   queryContent(`/posts/${route.params.slug}`).findOne()
-);
-
-const formattedDate = useDateFormat(
-  new Date(Date.now()),
-  "DD [de] MMMM [de] YYYY",
-  {
-    locales: "pt-BR",
-  }
 );
 
 defineOgImageStatic({
@@ -32,7 +22,9 @@ useSeoMeta({
         {{ post.title }}
       </h1>
       <div>
-        <time :datetime="post.publishDate">{{ formattedDate }}</time>
+        <time :datetime="post.publishDate">{{
+          getFormattedDate(post.publishDate)
+        }}</time>
         <ul class="article-tags">
           <li v-for="tag in post.tags">
             <NuxtLink :href="'/tags/' + tag" class="tag">{{ tag }}</NuxtLink>
