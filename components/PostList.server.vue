@@ -1,32 +1,12 @@
 <script setup lang="ts">
 const props = defineProps<{
-  tag?: string | string[];
+  tag?: string;
   limit?: number;
 }>();
 
-const { data: postList } = await useAsyncData(() => {
-  const query = queryContent(`/posts/`).only([
-    "title",
-    "tags",
-    "publishDate",
-    "shortDescription",
-    "_path",
-  ]);
+const excludeDraft = process.env.NODE_ENV === "development" ? false : true;
 
-  if (process.env.NODE_ENV !== "development") {
-    query.where({ draft: false });
-  }
-
-  if (props.tag) {
-    query.where({ tags: { $contains: props.tag } });
-  }
-
-  if (props.limit) {
-    query.limit(5);
-  }
-
-  return query.find();
-});
+const postList = await getPosts(excludeDraft, props.tag, props.limit);
 </script>
 
 <template>
