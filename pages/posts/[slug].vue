@@ -1,8 +1,9 @@
 <script setup lang="ts">
 const route = await useRoute();
+const slug = route.params.slug;
 
-const { data: post } = await useAsyncData(() =>
-  queryContent(`/posts/${route.params.slug}`).findOne()
+const { data: post } = await useAsyncData(`post-${slug}`, () =>
+  queryContent(`/posts/${slug}`).findOne()
 );
 
 defineOgImageStatic({
