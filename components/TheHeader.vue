@@ -26,6 +26,9 @@ const currentTheme = computed(() => colorMode.value);
             <NuxtLink to="/tags">Tags</NuxtLink>
           </li>
           <li>
+            <NuxtLink to="/posts">Posts</NuxtLink>
+          </li>
+          <li>
             <NuxtLink to="/sobre">Sobre</NuxtLink>
           </li>
         </ul>
