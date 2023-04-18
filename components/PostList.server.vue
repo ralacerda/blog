@@ -1,12 +1,7 @@
 <script setup lang="ts">
 const props = defineProps<{
-  tag?: string;
-  limit?: number;
+  postList: any;
 }>();
-
-const excludeDraft = process.env.NODE_ENV === "development" ? false : true;
-
-const postList = await getPosts(false, props.tag, props.limit);
 </script>
 
 <template>

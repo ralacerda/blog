@@ -1,6 +1,8 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const postList = await getPosts();
+</script>
 
 <template>
   <h1>Posts</h1>
-  <PostList />
+  <PostList :postList="postList" />
 </template>

@@ -1,8 +1,6 @@
-export default async function (
-  excludeDraft: boolean,
-  tag?: string,
-  limit?: number
-) {
+export default async function (tag?: string, limit?: number) {
+  const excludeDraft = process.env.NODE_ENV === "development" ? false : true;
+
   const { data } = await useAsyncData(
     `posts-${excludeDraft}-${tag}-${limit}`,
     () => {
