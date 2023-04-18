@@ -16,24 +16,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <article v-if="post">
-    <div class="article-info">
-      <h1>
-        {{ post.title }}
-      </h1>
-      <div>
-        <time :datetime="post.publishDate">{{
-          getFormattedDate(post.publishDate)
-        }}</time>
-        <ul class="article-tags">
-          <li v-for="tag in post.tags">
-            <NuxtLink :href="'/tags/' + tag" class="tag">{{ tag }}</NuxtLink>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <PostContent :value="post" />
-    <NuxtLink to="/posts" class="link-backward">Ver outras posts</NuxtLink>
-  </article>
-  <p v-else>Não conseguimos achar</p>
+  <PostContent :post="post" />
 </template>
