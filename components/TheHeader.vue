@@ -23,9 +23,6 @@ const currentTheme = computed(() => colorMode.value);
       <nav>
         <ul class="nav-links">
           <li>
-            <NuxtLink to="/posts">Posts</NuxtLink>
-          </li>
-          <li>
             <NuxtLink to="/tags">Tags</NuxtLink>
           </li>
           <li>
