@@ -1,6 +1,6 @@
 ---
 title: "Retornando o maior valor em um Array"
-publishDate: 2023-04-12
+publishDate: 2023-04-18
 draft: false
 tags: ["javascript", "array"]
 ---
