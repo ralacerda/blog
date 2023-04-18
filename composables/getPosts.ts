@@ -1,31 +1,25 @@
 export default async function (tag?: string, limit?: number) {
   const excludeDraft = process.env.NODE_ENV === "development" ? false : true;
 
-  const { data } = await useAsyncData(
-    `posts-${excludeDraft}-${tag}-${limit}`,
-    () => {
-      const query = queryContent(`/posts/`).only([
-        "title",
-        "tags",
-        "publishDate",
-        "shortDescription",
-        "_path",
-      ]);
+  const query = queryContent(`/posts/`).only([
+    "title",
+    "tags",
+    "publishDate",
+    "shortDescription",
+    "_path",
+  ]);
 
-      if (excludeDraft) {
-        query.where({ draft: false });
-      }
+  if (excludeDraft) {
+    query.where({ draft: false });
+  }
 
-      if (tag) {
-        query.where({ tags: { $contains: tag } });
-      }
+  if (tag) {
+    query.where({ tags: { $contains: tag } });
+  }
 
-      if (limit) {
-        query.limit(5);
-      }
+  if (limit) {
+    query.limit(5);
+  }
 
-      return query.find();
-    }
-  );
-  return data;
+  return query.find();
 }
