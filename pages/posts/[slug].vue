@@ -2,7 +2,9 @@
 const route = await useRoute();
 const slug = route.params.slug;
 
-const { data: post } = await queryContent(`/posts/${slug}`).findOne();
+const { data: post } = await useAsyncData(`post-${slug}`, () => {
+  return queryContent(`/posts/${slug}`).findOne();
+});
 
 defineOgImageStatic({
   component: "PostImage",
