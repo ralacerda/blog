@@ -28,12 +28,15 @@ const { data: postList } = await useAsyncData(() => {
   return query.find();
 });
 
-const formattedDate = useDateFormat(
-  new Date(Date.now()),
-  "DD [de] MMMM [de] YYYY",
-  {
-    locales: "pt-BR",
-  }
+dayjs.extend(utc);
+
+function formatDate(date: Date) {
+  const formattedDate = dayjs(date)
+    .locale("pt-BR")
+    .utc()
+    .format("DD [de] MMMM [de] YYYY");
+  return formattedDate;
+}
 );
 </script>
 

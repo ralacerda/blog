@@ -40,7 +40,7 @@ useSeoMeta({
         </ul>
       </div>
     </div>
-    <PostContent :value="post" />
+    <ContentRenderer :value="post" class="article-content" />
     <NuxtLink to="/posts" class="link-backward">Ver outras posts</NuxtLink>
   </article>
   <p v-else>Não conseguimos achar</p>
