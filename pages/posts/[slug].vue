@@ -17,5 +17,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <PostContent :post="post" />
+  <PostContent v-if="post" :post="post" />
 </template>
