@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "@nuxtjs/google-fonts",
     "unplugin-icons/nuxt",
+    "@nuxtjs/seo",
   ],
   content: {
     contentHead: false,
@@ -35,6 +36,13 @@ export default defineNuxtConfig({
       "Noto+Sans": true,
       Lato: true,
     },
+  },
+  site: {
+    url: "https://frontend-walrus.netlify.app/",
+    name: "Frontend Walrus",
+    description:
+      "O Frontend Walrus é um site onde eu compartilho meus estudos e recursos de desenvolvimento FrontEnd. O objetivo é compartilhar o que eu tenho aprendido com o objetivo de ajudar outros desenvolvedores.",
+    defaultLocale: "pt",
   },
   app: {
     head: {
