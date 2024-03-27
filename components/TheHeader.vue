@@ -30,7 +30,7 @@ const currentTheme = computed(() => colorMode.value);
           </li>
         </ul>
       </nav>
-      <button @click="toggleTheme">
+      <button @click="toggleTheme" aria-label="Alterar Tema">
         <component :is="currentTheme == 'light' ? SunIcon : MoonIcon" />
       </button>
     </div>
