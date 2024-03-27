@@ -1,5 +1,8 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  devtools: {
+    enabled: true,
+  },
   css: ["@/assets/styles/index.scss"],
   modules: [
     "@nuxt/content",
@@ -43,6 +46,11 @@ export default defineNuxtConfig({
     description:
       "O Frontend Walrus é um site onde eu compartilho meus estudos e recursos de desenvolvimento FrontEnd. O objetivo é compartilhar o que eu tenho aprendido com o objetivo de ajudar outros desenvolvedores.",
     defaultLocale: "pt",
+  },
+  ogImage: {
+    defaults: {
+      component: "DefaultImage",
+    },
   },
   app: {
     head: {

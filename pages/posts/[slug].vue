@@ -11,6 +11,11 @@ useSeoMeta({
   description: post.value?.description,
   ogType: "article",
 });
+
+defineOgImageComponent("BlogPost", {
+  title: post.value?.title,
+  description: post.value?.description,
+});
 </script>
 
 <template>
