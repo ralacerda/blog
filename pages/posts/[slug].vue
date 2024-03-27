@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const route = await useRoute();
+const route = useRoute();
 const slug = route.params.slug;
 
 const { data: post } = await useAsyncData(`post-${slug}`, () => {
@@ -11,7 +11,7 @@ defineOgImageStatic({
 });
 
 useSeoMeta({
-  title: () => post.value?.title,
+  title: post.value?.title,
   description: () => post.value?.description,
 });
 </script>
