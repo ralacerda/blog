@@ -1,5 +1,7 @@
 <template>
-  <article><ContentDoc /></article>
+  <article>
+    <ContentDoc />
+  </article>
 </template>
 
 <style lang="scss" scoped>

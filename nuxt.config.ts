@@ -7,8 +7,8 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "unplugin-icons/nuxt",
   ],
-  extends: ["nuxt-seo-kit"],
   content: {
+    contentHead: false,
     highlight: {
       theme: {
         default: "github-dark",
@@ -36,15 +36,6 @@ export default defineNuxtConfig({
       Lato: true,
     },
   },
-  runtimeConfig: {
-    public: {
-      siteUrl: "https://frontend-walrus.netlify.app/",
-      siteName: "Frontend Walrus",
-      siteDescription:
-        "O Frontend Walrus é um site onde eu compartilho meus estudos e recursos de desenvolvimento FrontEnd. O objetivo é compartilhar o que eu tenho aprendido com o objetivo de ajudar outros desenvolvedores.",
-      language: "pt-BR",
-    },
-  },
   app: {
     head: {
       link: [
@@ -68,8 +59,5 @@ export default defineNuxtConfig({
         { rel: "manifest", href: "/site.webmanifest" },
       ],
     },
-  },
-  experimental: {
-    componentIslands: true,
   },
 });
