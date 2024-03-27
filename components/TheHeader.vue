@@ -1,8 +1,5 @@
 <script setup lang="ts">
-// Type declarations for iconify-icons not wokring
-// @ts-expect-error
 import SunIcon from "~icons/ph/sun";
-// @ts-expect-error
 import MoonIcon from "~icons/ph/moon";
 
 const colorMode = useColorMode();
