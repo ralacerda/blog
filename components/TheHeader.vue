@@ -45,6 +45,10 @@ const currentTheme = computed(() => colorMode.value);
   flex-wrap: wrap;
   gap: 0.5rem 3rem;
   font-family: Lato;
+
+  a {
+    padding: 12px;
+  }
 }
 
 .site-name {
@@ -60,5 +64,9 @@ const currentTheme = computed(() => colorMode.value);
   display: flex;
   gap: 1.5rem;
   list-style: none;
+
+  li a {
+    padding: 12px;
+  }
 }
 </style>
