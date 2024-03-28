@@ -5,7 +5,7 @@ export default async function (tag?: string, limit?: number) {
     "title",
     "tags",
     "publishDate",
-    "shortDescription",
+    "description",
     "_path",
   ]);
 

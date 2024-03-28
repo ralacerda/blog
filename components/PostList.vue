@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
   postList: any;
 }>();
 </script>
@@ -13,6 +13,7 @@ const props = defineProps<{
       <time :datetime="post.publishDate">{{
         getFormattedDate(post.publishDate)
       }}</time>
+      <p>{{ post.description }}</p>
       <ul class="tag-list">
         <li v-for="tag in post.tags">
           <NuxtLink class="tag" :to="'/tags/' + tag">{{ tag }}</NuxtLink>
@@ -21,3 +22,13 @@ const props = defineProps<{
     </li>
   </ul>
 </template>
+
+<style lang="scss" scoped>
+time {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+</style>
