@@ -1,7 +1,7 @@
 <template>
   <footer>
     <hr />
-    <p>Renato Lacerda · 2023</p>
+    <p>Renato Lacerda · 2024</p>
     <ul>
       <li>
         <a href="https://www.linkedin.com/in/renato-ac-lacerda">Linkedin</a>

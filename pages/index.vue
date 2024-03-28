@@ -7,5 +7,5 @@ const postList = await getPosts(undefined, 5);
   <article>
     <PostList :postList="postList" />
   </article>
-  <NuxtLink to="/posts" class="link-forward">Todos os posts</NuxtLink>
+  <NuxtLink to="/posts" class="link-forward">See all posts</NuxtLink>
 </template>
