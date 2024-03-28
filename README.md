@@ -1,42 +1,32 @@
-# Content v2 Minimal Starter
+# Frontend Walrus
 
-Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
+This is the source code for my dev blog [Frontend Walrus](https://frontend-walrus.netlify.app/).
 
-## Setup
+## Tools
+
+Frontend Walrus is build using the following tools:
+
+- [Nuxt](https://nuxtjs.org/) with the following modules:
+  - [Nuxt Content](https://content.nuxtjs.org/)
+  - [Color Mode](https://color-mode.nuxtjs.org/)
+  - [Google Fonts](https://google-fonts.nuxtjs.org/)
+  - [Unplugin Icons](https://github.com/unplugin/unplugin-icons)
+  - [Nuxt SEO](https://nuxtseo.com/)
+- Sass
+- [Netlify](https://www.netlify.com/)
+- [pnpm](https://pnpm.io/)
+- Git and [Github](https://github.com/)
+
+## Running locally
 
 Make sure to install the dependencies:
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
+```sh
 pnpm install
 ```
-
-## Development Server
 
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+pnpm run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
