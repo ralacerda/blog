@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     display: "fallback",
     families: {
       "Noto+Sans": true,
-      Lato: true,
+      Khula: true,
     },
   },
   site: {

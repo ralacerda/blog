@@ -44,7 +44,7 @@ const currentTheme = computed(() => colorMode.value);
   align-items: baseline;
   flex-wrap: wrap;
   gap: 0.5rem 3rem;
-  font-family: Lato;
+  font-family: inherit;
 
   a {
     padding: 12px;

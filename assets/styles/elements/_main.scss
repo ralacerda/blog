@@ -5,16 +5,16 @@ main {
 h1,
 h2 {
   line-height: 1.1;
-  font-family: Lato;
+  font-family: "Khula";
 }
 
 h1 {
-  font-size: var(--step-3);
+  font-size: var(--step-4);
   max-width: 30ch;
   margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: var(--step-2);
+  font-size: var(--step-3);
   max-width: 45ch;
 }
