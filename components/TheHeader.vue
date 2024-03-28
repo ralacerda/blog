@@ -26,11 +26,11 @@ const currentTheme = computed(() => colorMode.value);
             <NuxtLink to="/tags">Tags</NuxtLink>
           </li>
           <li>
-            <NuxtLink to="/sobre">Sobre</NuxtLink>
+            <NuxtLink to="/about">About</NuxtLink>
           </li>
         </ul>
       </nav>
-      <button @click="toggleTheme" aria-label="Alterar Tema">
+      <button @click="toggleTheme" aria-label="Change theme">
         <component :is="currentTheme == 'light' ? SunIcon : MoonIcon" />
       </button>
     </div>

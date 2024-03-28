@@ -1,9 +1,9 @@
 ---
-title: "Retornando o maior valor em um Array"
+title: "Returning the highest value in an Array"
 publishDate: 2023-04-18
 draft: false
 tags: ["javascript", "array"]
-description: "Como retornar o maior valor entre elementos de um array"
+description: "Three different approaches to the same problem"
 ---
 
 Procurando por exercícios para praticar Javascript, encontrei a seguinte questão: "Escreva uma função que recebe um array e retorna o maior valor entre os elementos". É uma tarefa simples, mas ela pode envolver diferentes aspectos do Javascript. Neste artigo, vou apresentar algumas soluções diferentes que eu encontrei para o problema, utilizando três abordagens distintas.

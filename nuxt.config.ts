@@ -24,8 +24,8 @@ export default defineNuxtConfig({
       anchorLinks: false,
       rehypePlugins: {
         "remark-rehype": {
-          footnoteLabel: "Notas",
-          footnoteBackLabel: "Voltar para o texto",
+          footnoteLabel: "Notes",
+          footnoteBackLabel: "Back to text",
         },
       },
     },
@@ -43,9 +43,9 @@ export default defineNuxtConfig({
   site: {
     url: "https://frontend-walrus.netlify.app/",
     name: "Frontend Walrus",
-    description:
-      "O Frontend Walrus é um site onde eu compartilho meus estudos e recursos de desenvolvimento FrontEnd. O objetivo é compartilhar o que eu tenho aprendido com o objetivo de ajudar outros desenvolvedores.",
-    defaultLocale: "pt",
+    description: `Frontend Walrus is a website where I share my studies and resources for front-end development.
+    The goal is to share what I have learned with the aim of helping other developers.`,
+    defaultLocale: "en",
   },
   ogImage: {
     defaults: {
