@@ -3,7 +3,7 @@ const postList = await getPosts(undefined, 5);
 </script>
 
 <template>
-  <h1>Frontend Walrus</h1>
+  <h1 class="sr-only">Frontend Walrus</h1>
   <article>
     <PostList :postList="postList" />
   </article>
