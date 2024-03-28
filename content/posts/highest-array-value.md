@@ -3,10 +3,10 @@ title: "Returning the highest value in an Array"
 publishDate: 2023-04-18
 draft: false
 tags: ["javascript", "array"]
-description: "Four distinct approaches to the same problem"
+description: "Four distinct approaches to the same interview question: \"Write a function that returns the highest value among the elements in an Array\""
 ---
 
-Looking for exercises to practice Javascript, I found the following inteview question: "Write a function that receives an array and returns the highest value among the elements". It's a simple task, but it can involve different aspects of Javascript. In this article, I will present some different solutions that I found for the problem, using four distinct approaches.
+Looking for exercises to practice Javascript, I found the following inteview question: "Write a function that returns the highest value among the elements in an Array". It's a simple task, but it can involve different aspects of Javascript. In this article, I will present some different solutions that I found for the problem, using four distinct approaches.
 
 As an example, we will use the array below. The goal is for the function to return 57, the largest value among the elements.
 
