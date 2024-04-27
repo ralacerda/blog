@@ -2,7 +2,7 @@
 title: "Sum of unique numbers"
 publishDate: 2024-04-26
 draft: false
-tags: ["javascript", "array"]
+tags: ["javascript", "interview-question"]
 description: "Filtering and summing unique numbers using filter, set and reduce"
 ---
 
