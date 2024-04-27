@@ -1,6 +1,4 @@
 export default async function (tag?: string, limit?: number) {
-  const excludeDraft = process.env.NODE_ENV === "development" ? false : true;
-
   const query = queryContent(`/posts/`).only([
     "title",
     "tags",
@@ -9,9 +7,7 @@ export default async function (tag?: string, limit?: number) {
     "_path",
   ]);
 
-  if (excludeDraft) {
-    query.where({ draft: false });
-  }
+  query.where({ draft: false });
 
   if (tag) {
     query.where({ tags: { $contains: tag } });
@@ -20,6 +16,8 @@ export default async function (tag?: string, limit?: number) {
   if (limit) {
     query.limit(5);
   }
+
+  query.sort({ publishDate: -1 });
 
   return query.find();
 }
