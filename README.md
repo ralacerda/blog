@@ -1,6 +1,6 @@
-# Frontend Walrus
+# Blog | Renato Lacerda
 
-This is the source code for my dev blog [Frontend Walrus](https://frontend-walrus.netlify.app/).
+This is the source code for my [dev blog](https://blog.renatolacerda.com).
 
 ## Tools
 
