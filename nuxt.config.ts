@@ -41,9 +41,9 @@ export default defineNuxtConfig({
     },
   },
   site: {
-    url: "https://frontend-walrus.netlify.app/",
-    name: "Frontend Walrus",
-    description: `Frontend Walrus is a website where I share my studies and resources for front-end development.
+    url: "https://blog.renatolacerda.com",
+    name: "Blog",
+    description: `A blog where I share my studies and resources for development.
     The goal is to share what I have learned with the aim of helping other developers.`,
     defaultLocale: "en",
   },
@@ -56,23 +56,9 @@ export default defineNuxtConfig({
     head: {
       link: [
         {
-          rel: "apple-touch-icon",
-          sizes: "180x180",
-          href: "/apple-touch-icon.png",
-        },
-        {
           rel: "icon",
-          type: "image/png",
-          sizes: "32x32",
-          href: "/favicon-32x32.png",
+          href: "https://fav.farm/📘",
         },
-        {
-          rel: "icon",
-          type: "image/png",
-          sizes: "16x16",
-          href: "/favicon-16x16.png",
-        },
-        { rel: "manifest", href: "/site.webmanifest" },
       ],
     },
   },
