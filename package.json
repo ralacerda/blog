@@ -18,6 +18,7 @@
     "@nuxtjs/google-fonts": "^3.2.0",
     "consola": "^3.2.3",
     "dayjs": "^1.11.10",
+    "remark-rehype": "^11.1.0",
     "sass": "^1.72.0"
   }
 }

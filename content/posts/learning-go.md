@@ -10,7 +10,7 @@ Two weeks ago, I’ve decided to learn Go. Mostly because I’ve been programing
 
 I know Javascript can also be used for both, but outside of frontend developing with Typescript and Vue, I don’t think I enjoy writing Javascript. Setting up a simple API or a small script is a pain [^1], getting Typescript and ESLint working can take a while, and due to Javascript lack of standard library, you either have to re-invent solutions or use a third package, but then again, you have to check if they are compatible, include Types, and so on.
 
-[^1] This is why I love Vite so much. You can easily create a basic Vue project with Typescript, ESLint and Vitest with a single command.
+[^1]: This is why I love [Vite](https://vitejs.dev) so much. You can easily create a basic Vue project with Typescript, ESLint and Vitest with a single command.
 
 I’ve started by watching Max Firt course on Frontend Master: [Basics of Go](https://frontendmasters.com/courses/go-basics/), which I 100% recommend. It is a great introduction to the language for developers, and there is also a bunch of tips and tricks. After that, I read (parts of) “The Power of Go tools”, which taught me some really good patterns on writting packages and testing. I've also been reading the [Effective Go](https://go.dev/doc/effective_go) page, it’s great guide on how to write “idiomatic Go code”, but I’ll have to go back to understand better the go routines aspects.
 
