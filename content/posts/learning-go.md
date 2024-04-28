@@ -1,5 +1,5 @@
 ---
-title: "Learning go"
+title: "Learning Go"
 publishDate: 2024-04-28
 draft: false
 tags: ["go", "learning-in-public"]
