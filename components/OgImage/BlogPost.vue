@@ -19,7 +19,7 @@ defineProps({
       }"
     />
     <div class="p-8">
-      <p :style="{ fontSize: '32px', color: '#79c0ff' }">Blog</p>
+      <p :style="{ fontSize: '32px', color: '#79c0ff' }">Renato Lacerda · Blog</p>
       <h1 :style="{ fontSize: '70px', marginTop: '14px' }">{{ title }}</h1>
       <p :style="{ fontSize: '32px', marginTop: '12px' }">{{ description }}</p>
     </div>

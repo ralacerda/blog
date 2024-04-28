@@ -16,7 +16,7 @@
         padding: '8px',
       }"
     >
-      Blog
+      Renato Lacerda · Blog
     </h1>
   </div>
 </template>
