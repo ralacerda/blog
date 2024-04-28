@@ -22,12 +22,6 @@ export default defineNuxtConfig({
     },
     markdown: {
       anchorLinks: false,
-      rehypePlugins: {
-        "remark-rehype": {
-          footnoteLabel: "Notes",
-          footnoteBackLabel: "Back to text",
-        },
-      },
     },
   },
   colorMode: {
