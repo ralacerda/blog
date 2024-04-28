@@ -2,7 +2,7 @@
 title: "Learning Go"
 publishDate: 2024-04-28
 draft: false
-tags: ["go", "learning-in-public"]
+tags: ["golang", "learning-in-public"]
 description: "Learning another language for backend and terminal applications"
 ---
 
