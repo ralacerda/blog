@@ -27,7 +27,8 @@ const tagSet = Array.from(getAllTags());
 .tag-list {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
 }
 
 .tag-list .tag {
