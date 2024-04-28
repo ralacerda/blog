@@ -16,7 +16,7 @@
         padding: '8px',
       }"
     >
-      Frontend Walrus
+      Blog
     </h1>
   </div>
 </template>

@@ -22,6 +22,6 @@ defineProps<{
       </div>
     </div>
     <ContentRenderer :value="post" class="article-content" />
-    <NuxtLink to="/posts" class="link-backward">All posts</NuxtLink>
+    <NuxtLink to="/" class="link-backward">Go Back</NuxtLink>
   </article>
 </template>

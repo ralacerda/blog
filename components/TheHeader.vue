@@ -13,27 +13,22 @@ const currentTheme = computed(() => colorMode.value);
 
 <template>
   <header class="header">
-    <NuxtLink to="/" class="site-name"
-      ><span class="gray-text">Frontend</span> Walrus</NuxtLink
-    >
-    <div class="right-side">
-      <nav>
-        <ul class="nav-links">
-          <li>
-            <NuxtLink to="/posts">Posts</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/tags">Tags</NuxtLink>
-          </li>
-          <li>
-            <NuxtLink to="/about">About</NuxtLink>
-          </li>
-        </ul>
-      </nav>
-      <button @click="toggleTheme" aria-label="Change theme">
-        <component :is="currentTheme == 'light' ? SunIcon : MoonIcon" />
-      </button>
-    </div>
+    <nav>
+      <ul class="nav-links">
+        <li>
+          <NuxtLink to="/">Home</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/tags">Tags</NuxtLink>
+        </li>
+        <li>
+          <NuxtLink to="/about">About</NuxtLink>
+        </li>
+      </ul>
+    </nav>
+    <button @click="toggleTheme" aria-label="Change theme">
+      <component :is="currentTheme == 'light' ? SunIcon : MoonIcon" />
+    </button>
   </header>
 </template>
 
