@@ -7,7 +7,6 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/content",
     "@nuxtjs/color-mode",
-    "@nuxtjs/google-fonts",
     "unplugin-icons/nuxt",
     "@nuxtjs/seo",
   ],
@@ -26,13 +25,6 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: "",
-  },
-  googleFonts: {
-    display: "fallback",
-    families: {
-      "Noto+Sans": true,
-      Khula: true,
-    },
   },
   site: {
     url: "https://blog.renatolacerda.com",
