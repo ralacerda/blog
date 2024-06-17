@@ -1,4 +1,4 @@
-export default async function (tag?: string, limit?: number) {
+export default async function (lang: string, tag?: string, limit?: number) {
   const query = queryContent(`/posts/`).only([
     "title",
     "tags",
@@ -7,7 +7,7 @@ export default async function (tag?: string, limit?: number) {
     "_path",
   ]);
 
-  query.where({ draft: false });
+  query.where({ draft: false, lang });
 
   if (tag) {
     query.where({ tags: { $contains: tag } });

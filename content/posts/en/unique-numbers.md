@@ -2,8 +2,9 @@
 title: "Sum of unique numbers"
 publishDate: 2024-04-26
 draft: false
-tags: ["javascript", "interview-question"]
+tags: ["javascript"]
 description: "Filtering and summing unique numbers using filter, set and reduce"
+lang: "en"
 ---
 
 [Cassidy Williams](https://cassidoo.co/) has an awesome newsletter that includes, among other things, interview questions. Here is a interesting one:

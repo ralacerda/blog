@@ -2,8 +2,9 @@
 title: "Learning Go"
 publishDate: 2024-04-28
 draft: false
-tags: ["golang", "learning-in-public"]
+tags: ["golang"]
 description: "Learning another language for backend and terminal applications"
+lang: "en"
 ---
 
 Two weeks ago, I’ve decided to learn Go. Mostly because I’ve been programing with Javascript/Typescript for almost two years now, and I wanted to learn something new. I chose Go because it can be used for creating backend and terminal applications, something that I’ve been looking into recently.

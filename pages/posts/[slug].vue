@@ -1,9 +1,10 @@
 <script setup lang="ts">
 const route = useRoute();
 const slug = route.params.slug;
+const { locale } = useI18n();
 
 const { data: post } = await useAsyncData(`post-${slug}`, () => {
-  return queryContent(`/posts/${slug}`).findOne();
+  return queryContent(`/posts/${locale.value}/${slug}`).findOne();
 });
 
 useSeoMeta({

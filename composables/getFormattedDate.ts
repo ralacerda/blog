@@ -4,5 +4,8 @@ import utc from "dayjs/plugin/utc";
 dayjs.extend(utc);
 
 export default function (date: Date) {
-  return dayjs(date).locale("pt-BR").utc().format("DD/MM/YYYY");
+  const { locale } = useI18n();
+  const dateLocale = locale.value === "pt" ? "pt-BR" : "en-US";
+
+  return dayjs(date).locale(dateLocale).utc().format("DD MMMM YYYY");
 }

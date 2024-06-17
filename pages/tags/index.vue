@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const localePath = useLocalePath();
+
 const { data: tagList } = await useAsyncData("tags", () =>
   queryContent("/").where({ draft: false }).only("tags").find()
 );
@@ -18,7 +20,9 @@ const tagSet = Array.from(getAllTags());
   <h1>Tags</h1>
   <ul class="tag-list">
     <li v-for="tag in tagSet">
-      <NuxtLink :to="'/tags/' + tag" class="tag">{{ tag }}</NuxtLink>
+      <NuxtLink :to="localePath('/tags/' + tag)" class="tag">{{
+        tag
+      }}</NuxtLink>
     </li>
   </ul>
 </template>

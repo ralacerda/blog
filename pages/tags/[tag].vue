@@ -2,7 +2,9 @@
 const route = useRoute();
 const tag = route.params.tag as string;
 
-const postList = await getPosts(tag);
+const { locale } = useI18n();
+
+const postList = await getPosts(locale.value, tag);
 </script>
 
 <template>

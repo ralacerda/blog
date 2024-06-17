@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "unplugin-icons/nuxt",
     "@nuxtjs/seo",
+    "@nuxtjs/i18n",
   ],
   content: {
     contentHead: false,
@@ -47,5 +48,22 @@ export default defineNuxtConfig({
         },
       ],
     },
+  },
+  i18n: {
+    baseUrl: "https://blog.renatolacerda.com",
+    locales: [
+      {
+        code: "en",
+        iso: "en-US",
+      },
+      {
+        code: "pt",
+        iso: "pt",
+      },
+    ],
+    defaultLocale: "en",
+    strategy: "prefix_except_default",
+    vueI18n: "./i18n.config.ts",
+    detectBrowserLanguage: false,
   },
 });

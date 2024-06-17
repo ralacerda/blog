@@ -22,6 +22,6 @@ defineProps<{
       </div>
     </div>
     <ContentRenderer :value="post" class="article-content" />
-    <NuxtLink to="/" class="link-backward">Go Back</NuxtLink>
+    <NuxtLink to="/" class="link-backward">{{ $t("back") }}</NuxtLink>
   </article>
 </template>

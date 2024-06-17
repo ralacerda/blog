@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const postList = await getPosts(undefined, 5);
+const { locale } = useI18n();
+const postList = await getPosts(locale.value, undefined, 5);
 </script>
 
 <template>

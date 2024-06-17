@@ -3,7 +3,8 @@ title: "Returning the highest value in an Array"
 publishDate: 2023-04-18
 draft: false
 tags: ["javascript", "array"]
-description: "Four distinct approaches to the same interview question: \"Write a function that returns the highest value among the elements in an Array\""
+description: 'Four distinct approaches to the same interview question: "Write a function that returns the highest value among the elements in an Array"'
+lang: "en"
 ---
 
 Looking for exercises to practice Javascript, I found the following inteview question: "Write a function that returns the highest value among the elements in an Array". It's a simple task, but it can involve different aspects of Javascript. In this article, I will present some different solutions that I found for the problem, using four distinct approaches.
@@ -75,7 +76,7 @@ numbers; // [ 4, 4, 5, 9, 13, 30, 41, 43, 57 ]
 
 Mutating the array in this way can lead to unexpected bugs. It's important to avoid this type of "side effect" in our code.
 
-One solution is to use the `sort()` method on a copy of the original array[^2]. The simplest way to do this is by using the [spread syntax](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax): 
+One solution is to use the `sort()` method on a copy of the original array[^2]. The simplest way to do this is by using the [spread syntax](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax):
 
 [^2]: There is already an accepted proposal for a method called `toSorted()` that returns a copy of the sorted array. You can check browser support on [can I use](https://caniuse.com/mdn-javascript_builtins_array_tosorted).
 
@@ -96,7 +97,7 @@ Another possible solution to the problem would follow these steps:
 2. For each element in the array, if it is greater than the current value of the variable, change the value of the variable to be the value of the element.
 3. Return the variable
 
-We can implement like the following: 
+We can implement like the following:
 
 ```javascript
 function getLargestNumber(numbersArray) {
@@ -192,7 +193,6 @@ getLargestNumber(negativeNumbers); // -1
 
 The first element of the array becomes the accumulator and is compared to the next element (`number`). If the element is greater than the accumulator, we return the element, if not, we return the accumulator. The returned value becomes the new accumulator that will be compared to the next element, and so on.
 
-
 Using the [Ternary Conditional Operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator), we can further simplify the body of the function:
 
 ```javascript
@@ -213,7 +213,7 @@ To pass an array as a list of arguments, we use the `apply()` method.
 
 We can write the function as follows:
 
-[^5]: Javascript functions are [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) and have their own methods. 
+[^5]: Javascript functions are [objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function) and have their own methods.
 
 ```javascript
 function getLargestNumber(numbersArray) {
@@ -262,6 +262,7 @@ function getLargestNumberByMax(numbersArray) {
   return Math.max(...numbersArray);
 }
 ```
+
 What is the most correct way? I believe that readability should be taken into account before considering performance, memory usage, or lines of code. For me, the version that uses `Math.max()` is the simplest and fastest to understand.
 
 Of course, these functions are not perfect either, and each one handles edge cases differently. The context will determine what changes to the function are necessary to better handle these cases.
