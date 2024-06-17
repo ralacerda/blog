@@ -3,9 +3,12 @@ const route = useRoute();
 const slug = route.params.slug;
 const { locale } = useI18n();
 
-const { data: post } = await useAsyncData(`post-${slug}`, () => {
-  return queryContent(`/posts/${locale.value}/${slug}`).findOne();
-});
+const { data: post } = await useAsyncData(
+  `post-${slug}-${locale.value}`,
+  () => {
+    return queryContent(`/posts/${locale.value}/${slug}`).findOne();
+  }
+);
 
 useSeoMeta({
   title: post.value?.title,
