@@ -7,9 +7,9 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/content",
     "@nuxtjs/color-mode",
-    "unplugin-icons/nuxt",
     "@nuxtjs/seo",
     "@nuxtjs/i18n",
+    "nuxt-icon",
   ],
   content: {
     contentHead: false,

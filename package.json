@@ -7,12 +7,11 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@iconify-json/ph": "^1.1.11",
     "@nuxt/content": "^2.12.1",
     "@nuxtjs/i18n": "^8.3.1",
     "@nuxtjs/seo": "2.0.0-rc.10",
     "nuxt": "^3.11.1",
-    "unplugin-icons": "^0.18.5"
+    "nuxt-icon": "^0.6.10"
   },
   "dependencies": {
     "@floating-ui/vue": "^1.0.6",

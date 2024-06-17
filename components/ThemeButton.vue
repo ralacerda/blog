@@ -1,18 +1,23 @@
 <script setup lang="ts">
-import SunIcon from "~icons/ph/sun";
-import MoonIcon from "~icons/ph/moon";
-
 const colorMode = useColorMode();
 
 function toggleTheme() {
   colorMode.preference = colorMode.value == "light" ? "dark" : "light";
 }
-
-const currentTheme = computed(() => colorMode.value);
 </script>
 
 <template>
   <button @click="toggleTheme" aria-label="Change theme">
-    <component :is="currentTheme == 'light' ? SunIcon : MoonIcon" />
+    <Icon
+      :name="colorMode.preference == 'dark' ? 'ph:moon' : 'ph:sun'"
+      size="20px"
+    />
   </button>
 </template>
+
+<style lang="scss" scoped>
+button {
+  display: grid;
+  place-items: center;
+}
+</style>

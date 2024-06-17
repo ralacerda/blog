@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { offset, useFloating, flip, autoUpdate } from "@floating-ui/vue";
 import { onClickOutside } from "@vueuse/core";
-import LanguageIcon from "~icons/ph/translate";
 
 const switchLocalePath = useSwitchLocalePath();
 
@@ -29,11 +28,12 @@ onClickOutside(
 
 <template>
   <button
+    class="language-button"
     @click="showLanguageSelect = !showLanguageSelect"
     ref="languageButton"
     aria-label="Change Language"
   >
-    <LanguageIcon />
+    <Icon name="ph:translate" size="20px" />
   </button>
   <div
     v-show="showLanguageSelect"
@@ -41,25 +41,49 @@ onClickOutside(
     :style="floatingStyles"
     class="language-select"
   >
-    <NuxtLink :to="switchLocalePath('pt')" @click="showLanguageSelect = false"
-      >Português</NuxtLink
+    <NuxtLink
+      class="language-option"
+      :to="switchLocalePath('pt')"
+      @click="showLanguageSelect = false"
+      ><Icon class="language-flag" name="flag:br-4x3" />Português</NuxtLink
     >
-    <NuxtLink :to="switchLocalePath('en')" @click="showLanguageSelect = false"
-      >English</NuxtLink
+    <NuxtLink
+      class="language-option"
+      :to="switchLocalePath('en')"
+      @click="showLanguageSelect = false"
+      ><Icon class="language-flag" name="flag:us-4x3" />English</NuxtLink
     >
   </div>
 </template>
 
 <style lang="scss" scoped>
-
 .language-select {
-  background-color: #35383e;
-  border: 2px solid #4c4e54;
+  background-color: var(--bg-secondary);
   border-radius: 8px;
+}
 
-  a {
-    display: block;
-    padding: 8px 16px;
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+
+  @media (hover: hover) {
+    .language-flag {
+      filter: grayscale(1);
+      transition: filter 0.2s;
+    }
+
+    &:hover {
+      .language-flag {
+        filter: grayscale(0);
+      }
+    }
   }
+}
+
+.language-button {
+  display: grid;
+  place-items: center;
 }
 </style>

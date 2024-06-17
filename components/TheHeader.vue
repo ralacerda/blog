@@ -17,7 +17,7 @@ const localePath = useLocalePath();
         </li>
       </ul>
     </nav>
-    <div>
+    <div class="nav-buttons">
       <ThemeButton />
       <LanguageButton />
     </div>
@@ -28,7 +28,7 @@ const localePath = useLocalePath();
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.5rem 3rem;
   font-family: inherit;
@@ -55,5 +55,9 @@ const localePath = useLocalePath();
   li a {
     padding: 12px;
   }
+}
+
+.nav-buttons {
+  display: flex;
 }
 </style>
