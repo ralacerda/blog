@@ -1,40 +1,5 @@
 <script setup lang="ts">
-import SunIcon from "~icons/ph/sun";
-import MoonIcon from "~icons/ph/moon";
-import LanguageIcon from "~icons/ph/translate";
-import { offset, useFloating, flip, autoUpdate } from "@floating-ui/vue";
-import { onClickOutside } from "@vueuse/core";
-
-const colorMode = useColorMode();
 const localePath = useLocalePath();
-const switchLocalePath = useSwitchLocalePath();
-
-const languageButton = ref<HTMLElement>();
-const languageSelect = ref<HTMLElement>();
-const showLanguageSelect = ref(false);
-
-const { floatingStyles } = useFloating(languageButton, languageSelect, {
-  placement: "bottom-start",
-  middleware: [offset(5), flip()],
-  whileElementsMounted: autoUpdate,
-});
-
-onClickOutside(
-  languageSelect,
-  () => {
-    if (!showLanguageSelect.value) return;
-    showLanguageSelect.value = false;
-  },
-  {
-    ignore: [languageButton],
-  }
-);
-
-function toggleTheme() {
-  colorMode.preference = colorMode.value == "light" ? "dark" : "light";
-}
-
-const currentTheme = computed(() => colorMode.value);
 </script>
 
 <template>
@@ -53,33 +18,8 @@ const currentTheme = computed(() => colorMode.value);
       </ul>
     </nav>
     <div>
-      <button @click="toggleTheme" aria-label="Change theme">
-        <component :is="currentTheme == 'light' ? SunIcon : MoonIcon" />
-      </button>
-      <button
-        @click="showLanguageSelect = !showLanguageSelect"
-        ref="languageButton"
-        aria-label="Change Language"
-      >
-        <LanguageIcon />
-      </button>
-      <div
-        v-show="showLanguageSelect"
-        ref="languageSelect"
-        :style="floatingStyles"
-        class="language-select"
-      >
-        <NuxtLink
-          :to="switchLocalePath('pt')"
-          @click="showLanguageSelect = false"
-          >Português</NuxtLink
-        >
-        <NuxtLink
-          :to="switchLocalePath('en')"
-          @click="showLanguageSelect = false"
-          >English</NuxtLink
-        >
-      </div>
+      <ThemeButton />
+      <LanguageButton />
     </div>
   </header>
 </template>
@@ -114,17 +54,6 @@ const currentTheme = computed(() => colorMode.value);
 
   li a {
     padding: 12px;
-  }
-}
-
-.language-select {
-  background-color: #35383e;
-  border: 2px solid #4c4e54;
-  border-radius: 8px;
-
-  a {
-    display: block;
-    padding: 8px 16px;
   }
 }
 </style>
