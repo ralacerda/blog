@@ -2,7 +2,7 @@
 import SunIcon from "~icons/ph/sun";
 import MoonIcon from "~icons/ph/moon";
 import LanguageIcon from "~icons/ph/translate";
-import { offset, useFloating } from "@floating-ui/vue";
+import { offset, useFloating, flip, autoUpdate } from "@floating-ui/vue";
 import { onClickOutside } from "@vueuse/core";
 
 const colorMode = useColorMode();
@@ -14,21 +14,24 @@ const languageSelect = ref<HTMLElement>();
 const showLanguageSelect = ref(false);
 
 const { floatingStyles } = useFloating(languageButton, languageSelect, {
-  placement: "bottom",
-  middleware: [offset(5)],
+  placement: "bottom-start",
+  middleware: [offset(5), flip()],
+  whileElementsMounted: autoUpdate,
 });
 
-onClickOutside(languageSelect, () => {
-  if (!showLanguageSelect.value) return;
-  showLanguageSelect.value = false;
-});
+onClickOutside(
+  languageSelect,
+  () => {
+    if (!showLanguageSelect.value) return;
+    showLanguageSelect.value = false;
+  },
+  {
+    ignore: [languageButton],
+  }
+);
 
 function toggleTheme() {
   colorMode.preference = colorMode.value == "light" ? "dark" : "light";
-}
-
-function changeLocale(locale: "pt" | "en") {
-  return switchLocalePath(locale);
 }
 
 const currentTheme = computed(() => colorMode.value);
@@ -118,11 +121,10 @@ const currentTheme = computed(() => colorMode.value);
   background-color: #35383e;
   border: 2px solid #4c4e54;
   border-radius: 8px;
-  padding: 4px 8px;
 
   a {
     display: block;
-    padding: 4px;
+    padding: 8px 16px;
   }
 }
 </style>
