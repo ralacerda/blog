@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true,
   },
-  css: ["@/assets/styles/index.scss"],
+  css: ["@/styles/index.scss"],
   modules: [
     "@nuxt/content",
     "@nuxtjs/color-mode",
@@ -11,6 +11,9 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "nuxt-icon",
   ],
+  future: {
+    compatibilityVersion: 4,
+  },
   content: {
     contentHead: false,
     highlight: {
