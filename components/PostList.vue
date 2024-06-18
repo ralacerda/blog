@@ -4,6 +4,7 @@ defineProps<{
 }>();
 
 const localePath = useLocalePath();
+const { locale } = useI18n();
 
 function removeLocaleFromPath(path: string) {
   return path.replace(/\/[a-z]{2}\//, "/");
@@ -17,7 +18,7 @@ function removeLocaleFromPath(path: string) {
         ><h2>{{ post.title }}</h2>
       </NuxtLink>
       <time :datetime="post.publishDate">{{
-        getFormattedDate(post.publishDate)
+        formatDate(post.publishDate, locale)
       }}</time>
       <p>{{ post.description }}</p>
       <ul class="tag-list">
