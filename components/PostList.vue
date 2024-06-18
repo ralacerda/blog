@@ -32,7 +32,7 @@ function removeLocaleFromPath(path: string) {
 
 <style lang="scss" scoped>
 time {
-  margin-bottom: 1rem;
+  margin-block: 0.25rem 1rem;
 }
 
 p {

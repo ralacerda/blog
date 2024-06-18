@@ -11,3 +11,10 @@ const postList = await getPosts(locale.value, tag);
   <h1 class="tag">{{ tag }}</h1>
   <PostList :postList="postList" />
 </template>
+
+<style lang="scss" scoped>
+.tag {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+</style>

@@ -18,7 +18,7 @@
 }
 
 .article-content {
-  margin-top: 1rem;
+  margin-top: 2rem;
   @include flow(1.4em);
   @include max-content();
 }
@@ -43,7 +43,7 @@ pre {
 }
 
 blockquote p {
-  max-width: 40ch;
+  max-width: 50ch;
   font-size: var(--step-2);
   color: var(--fg-secondary);
   font-style: italic;
