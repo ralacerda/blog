@@ -8,10 +8,17 @@ body {
   line-height: 1.6;
   font-size: var(--step-1);
   color: var(--fg);
-  font-family: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif;
+  font-family: "Noto Sans Deseret", sans-serif;
 
   background-color: var(--bg);
   transition: background-color 300ms;
+}
+
+h1,
+h2,
+h3,
+time {
+  font-family: "Noto Sans Glagolitic", sans-serif;
 }
 
 ul,

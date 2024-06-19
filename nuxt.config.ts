@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxtjs/seo",
     "@nuxtjs/i18n",
     "nuxt-icon",
+    "@nuxt/fonts",
   ],
   future: {
     compatibilityVersion: 4,
