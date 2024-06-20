@@ -5,6 +5,6 @@ export default function (date: Date, locale: string) {
     year: "numeric",
     month: "long",
     day: "numeric",
-    timeZone: "UTC",
+    timeZone: "America/Sao_Paulo",
   }).format(new Date(date));
 }
