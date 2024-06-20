@@ -6,5 +6,5 @@ export default function (date: string, locale: string) {
     month: "long",
     day: "numeric",
     timeZone: "America/Sao_Paulo",
-  }).format(new Date(date.slice(0, date.length - 1)));
+  }).format(new Date(date.replace("T00:00:00", "T12:00:00")));
 }
