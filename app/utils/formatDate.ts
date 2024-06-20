@@ -1,4 +1,4 @@
-export default function (date: Date, locale: string) {
+export default function (date: string, locale: string) {
   const dateLocale = locale === "en" ? "en-us" : "pt-br";
 
   return new Intl.DateTimeFormat(dateLocale, {
@@ -6,5 +6,5 @@ export default function (date: Date, locale: string) {
     month: "long",
     day: "numeric",
     timeZone: "America/Sao_Paulo",
-  }).format(new Date(date));
+  }).format(new Date(date.slice(0, date.length - 1)));
 }
