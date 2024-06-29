@@ -6,7 +6,6 @@ defineProps<{
 }>();
 
 const { locale } = useI18n();
-const localePath = useLocalePath();
 </script>
 
 <template>
@@ -21,16 +20,12 @@ const localePath = useLocalePath();
         }}</time>
         <ul class="article-tags">
           <li v-for="tag in post.tags">
-            <NuxtLink :to="localePath('/tags/' + tag)" class="tag">{{
-              tag
-            }}</NuxtLink>
+            <BlogLink :to="'/tags/' + tag" class="tag">{{ tag }}</BlogLink>
           </li>
         </ul>
       </div>
     </div>
     <ContentRenderer :value="post" class="article-content" />
-    <NuxtLink :to="localePath('/')" class="link-backward">{{
-      $t("back")
-    }}</NuxtLink>
+    <BlogLink :to="'/'" class="link-backward">{{ $t("back") }}</BlogLink>
   </article>
 </template>

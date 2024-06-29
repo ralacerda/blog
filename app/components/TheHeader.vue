@@ -1,19 +1,18 @@
-<script setup lang="ts">
-const localePath = useLocalePath();
-</script>
-
 <template>
   <header class="header">
     <nav>
       <ul class="nav-links">
         <li>
-          <NuxtLink :to="localePath('/')">{{ $t("home") }}</NuxtLink>
+          <BlogLink to="/">{{ $t("home") }}</BlogLink>
         </li>
         <li>
-          <NuxtLink :to="localePath('tags')">Tags</NuxtLink>
+          <BlogLink to="tags">Tags</BlogLink>
         </li>
         <li>
-          <NuxtLink :to="localePath('about')">{{ $t("about") }}</NuxtLink>
+          <BlogLink to="demos">Demos</BlogLink>
+        </li>
+        <li>
+          <BlogLink to="about">{{ $t("about") }}</BlogLink>
         </li>
       </ul>
     </nav>

@@ -23,9 +23,7 @@ function removeLocaleFromPath(path: string) {
       <p>{{ post.description }}</p>
       <ul class="tag-list">
         <li v-for="tag in post.tags">
-          <NuxtLink class="tag" :to="localePath('/tags/' + tag)">{{
-            tag
-          }}</NuxtLink>
+          <BlogLink class="tag" :to="'/tags/' + tag">{{ tag }}</BlogLink>
         </li>
       </ul>
     </li>
